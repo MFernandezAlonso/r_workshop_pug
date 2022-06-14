@@ -374,14 +374,18 @@ hotdog_names[length(hotdog_names)]
 ```
 
 
-
 4.12) **Super bonus exercise** (more of a brain puzzle than a coding exercise): Can you find a way to get the name of the **woman** who ate the **most hot dogs in 2019**? This can be achieved in a single (very long) line of code, but you can also solve it in several steps, saving intermediate results into variables.
 
 
 ```{r}
 
-hotdog_names[hotdog_sex=="female"][(hotdog_2019[hotdog_sex=="female"] == max( hotdog_2019[hotdog_sex=="female"]))]
+hotdog_names[hotdog_sex=="female"][
+  hotdog_2019[hotdog_sex=="female"] == max(hotdog_2019[hotdog_sex=="female"])
+  ]
+```
 
+```{r}
+which(hotdog_2018 == 74 | hotdog_2018 < 40)
 ```
 
 
