@@ -82,7 +82,20 @@ my_vector # print vector
 
 1.1) Create some vectors. Create one vector with characters, one with numbers, and one with logicals. Save them all into different variables.
 
+```{r}
+char_vector <- c("one", "two", "three")
+int_vector <- c(1, 2, 3)
+logi_vector <- c(TRUE, FALSE, TRUE)
+```
+
+
 1.2) We saw that the `c()` function combines elements into a vector, but it can also combine vectors! Try to combine some of the vectors you previously created using the `c()` function.
+
+```{r}
+char_int_comb = c(char_vector,int_vector)
+int_logi_comb = c(int_vector,char_vector)
+```
+
 
 ### Optional
 
@@ -113,9 +126,18 @@ What do you expect the following code will produce?
 
 2.2) `c(1, 2, 5) - 1`
 
+  0 1 4
+  
+
 2.3) `c(1, 2, 5) * 2`
 
+  2, 4, 10
+
+
 2.4) `c(1, 2, 5) / 2`
+
+  0.5 1.0 25
+
 
 Vectors are one of the most important concepts of `R`.
 Sure, other programming languages have similar concepts, but in `R`, vectors are really powerful.
@@ -131,9 +153,18 @@ Now, you can infer what these lines of code will do:
 
 2.5) `c(2, 4, 6) - c(1, 0, 1)`
 
+  1 4 5
+
+
 2.6) `c(2, 4, 6) * c(1, 0, 1)`
+  
+  2 0 6
+
 
 2.7) `c(2, 4, 6) / c(1, 2, 1)`
+
+  2 2 6
+
 
 However, things get *really* wild when we use vectors that don't have the same length.
 
@@ -143,13 +174,27 @@ Can you see what happened here?
 c(2, 4, 6, 5, 0, 0) + c(1, 10)
 ```
 
+
 Let's look at this concept some more.
 
 2.8) Can you multiply **every other** element of `c(2, 4, 6, 4, 9, 12)` with 2? (I.e. only 4, 4 and 12 should be multiplied with 2 - the other elements should be left unchanged.)
 
+```{r}
+c(2, 4, 6, 4, 9, 12) * c(1, 2)
+
+```
+
+
 ### Optional
 
 2.9) Given `c(2, 4, 6, 4, 9, 12)`, subtract 1 from the first element, 2 from the second, 3 from the third, then again 1 from the fourth, 2 from the second and so on.
+
+```{r}
+c(2, 4, 6, 4, 9, 12) - c(1,2,3)
+
+```
+
+
 
 2.10) Run the following code cell. What happened here? Is that bad?
 
