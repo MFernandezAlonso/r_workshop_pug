@@ -31,7 +31,7 @@
 # sense). Note how plain text results in an error, because R doesn't know what 
 # to do with it.
 
-This creates an error when you try to run it.
+# This creates an error when you try to run it.
 
 # So, commenting out a line prevents it from being run. If you want to comment
 # out larger chunks of text (or code), highlight everything  you want to comment
@@ -159,14 +159,14 @@ empty_variable
 
 # 1) A variable name must start with a letter!
 test123 <- "test" # this is a valid variable name
-123test <- "test" # this is not!
-_test <- "test" # also not valid!
+# 123test <- "test" # this is not!
+# _test <- "test" # also not valid!
 
 # 2) A variable can contain . and _, but not other special character.
 test_test <- "valid"
 test.test <- "valid"
-test#test <- "not valid"
-test test <- "Spaces don't work"
+# test#test <- "not valid"
+# test test <- "Spaces don't work"
 teßt <- "This does!" # even though I wouldn't recommend it!
 
 # 3) It's best to use "talking" variable names that tell you what's inside of 
@@ -207,7 +207,7 @@ THIS_IS_SCREAMING_SNAKE_CASE <- 2
 
 ## KEBAB CASE
 # In kebab case, words are separated by a dash. This does not work in R!
-this-is-kebab-case <- 1
+# this-is-kebab-case <- 1
 
 # Each language has "style guides" that specify what your code should look like. 
 # For example, most people use snake case in R. There are also rules for 
@@ -234,7 +234,7 @@ mean(c(1, 5))
 # Overwriting other things does not work. For example, "for" is a special 
 # keyword (which we'll get to know later in the workshop, so you can't overwrite 
 # it):
-for <- "test"
+# for <- "test"
 
 # Likewise, TRUE and FALSE can't be overwritten.
 TRUE <- "test"
